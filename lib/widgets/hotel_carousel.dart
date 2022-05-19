@@ -58,10 +58,13 @@ class HotelCarousel extends StatelessWidget {
                               children: [
                                 Text(
                                   hotel.name,
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w600,
-                                      letterSpacing: 1.2),
+                                  style: const TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w600,
+                                    letterSpacing: 1.2,
+                                  ),
+                                  overflow: TextOverflow.ellipsis,
+                                  maxLines: 1,
                                 ),
                                 SizedBox(height: 2),
                                 Text(
