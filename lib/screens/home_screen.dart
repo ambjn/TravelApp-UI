@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:travel_ui/widgets/destination_carousel.dart';
+import 'package:travel_ui/widgets/hotel_carousel.dart';
 
 class HomeScreen extends StatefulWidget {
-  HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -11,6 +12,8 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
+  int _currentTab = 0;
+
   final List<IconData> _icons = [
     FontAwesomeIcons.plane,
     FontAwesomeIcons.bed,
@@ -71,10 +74,32 @@ class _HomeScreenState extends State<HomeScreen> {
                   .toList(),
             ]),
           ),
-          const SizedBox(height: 20),
+          SizedBox(height: 20),
           DestinationCarousel(),
+          HotelCarousel(),
         ],
       )),
+      bottomNavigationBar: BottomNavigationBar(
+        onTap: (value) => setState(() {
+          _currentTab = value;
+        }),
+        currentIndex: _currentTab,
+        items: const [
+          BottomNavigationBarItem(
+              icon: Icon(Icons.search, size: 30), label: ''),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.local_pizza, size: 30), label: ''),
+          // BottomNavigationBarItem(
+          //     icon: CircleAvatar(
+          //       radius: 15,
+          //       backgroundImage: NetworkImage(
+          //           'https://images.pexels.com/photos/11293719/pexels-photo-11293719.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
+          //     ),
+          //     label: '')
+          BottomNavigationBarItem(
+              icon: Icon(Icons.person, size: 30), label: ''),
+        ],
+      ),
     );
   }
 }
