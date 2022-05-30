@@ -20,4 +20,4 @@ In the command terminal, run the following commands:
 
 ## Screenshots:
 
-<center> <img src = screenshots/1.png alt='screenshot-of-app'> </center>
+<center> <img src = screenshot/1.png alt='screenshot-of-app'> </center>
