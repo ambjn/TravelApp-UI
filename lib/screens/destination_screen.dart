@@ -13,6 +13,7 @@ class DestinationScreen extends StatefulWidget {
 }
 
 class _DestinationScreenState extends State<DestinationScreen> {
+  // to build stars for rating
   _buildRatingStars(int rating) {
     String stars = '';
     for (int i = 0; i < rating; i++) {
@@ -168,7 +169,7 @@ class _DestinationScreenState extends State<DestinationScreen> {
                                     ],
                                   ),
                                 ]),
-                            //
+                            // type of activity
                             Text(activity.type,
                                 style: const TextStyle(
                                   color: Colors.grey,

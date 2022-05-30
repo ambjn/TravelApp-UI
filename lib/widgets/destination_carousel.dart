@@ -4,7 +4,7 @@ import 'package:travel_ui/models/destination_model.dart';
 import 'package:travel_ui/screens/destination_screen.dart';
 
 class DestinationCarousel extends StatelessWidget {
-  DestinationCarousel({Key? key}) : super(key: key);
+  const DestinationCarousel({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -54,6 +54,7 @@ class DestinationCarousel extends StatelessWidget {
                         Positioned(
                           bottom: 15,
                           child: Container(
+                            //for text part
                             height: 120,
                             width: 200,
                             decoration: BoxDecoration(
@@ -67,14 +68,14 @@ class DestinationCarousel extends StatelessWidget {
                                 children: [
                                   Text(
                                     '${destination.activities.length} activities',
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                         fontSize: 20,
                                         fontWeight: FontWeight.w600,
                                         letterSpacing: 1.2),
                                   ),
                                   Text(
                                     destination.description,
-                                    style: TextStyle(color: Colors.grey),
+                                    style: const TextStyle(color: Colors.grey),
                                   )
                                 ],
                               ),
@@ -82,10 +83,11 @@ class DestinationCarousel extends StatelessWidget {
                           ),
                         ),
                         Container(
+                          //for image part
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(20),
-                              boxShadow: [
+                              boxShadow: const [
                                 BoxShadow(
                                     color: Colors.black26,
                                     offset: Offset(0, 2),
@@ -112,19 +114,21 @@ class DestinationCarousel extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(destination.city,
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                             fontSize: 24,
                                             fontWeight: FontWeight.w600,
                                             color: Colors.white,
                                             letterSpacing: 1.2)),
                                     Row(
                                       children: [
-                                        Icon(FontAwesomeIcons.locationArrow,
-                                            size: 10, color: Colors.white),
-                                        SizedBox(width: 5),
+                                        const Icon(
+                                            FontAwesomeIcons.locationArrow,
+                                            size: 10,
+                                            color: Colors.white),
+                                        const SizedBox(width: 5),
                                         Text(
                                           destination.country,
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                             color: Colors.white,
                                           ),
                                         ),

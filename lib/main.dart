@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travel_ui/screens/home_screen.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -17,9 +15,9 @@ class MyApp extends StatelessWidget {
         primaryColor: const Color(0xFF3EBACE),
         scaffoldBackgroundColor: const Color(0xFFF3F5F7),
         colorScheme: ColorScheme.fromSwatch()
-            .copyWith(secondary: const Color(0xFFD8ECF1)),
+            .copyWith(secondary: const Color(0xFFD8ECF1)), //accent color
       ),
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }

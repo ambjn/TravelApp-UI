@@ -14,6 +14,7 @@ class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
   int _currentTab = 0;
 
+  // list of icons from font_awesome_flutter
   final List<IconData> _icons = [
     FontAwesomeIcons.plane,
     FontAwesomeIcons.bed,
@@ -23,6 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
     FontAwesomeIcons.hotTubPerson,
   ];
 
+  // Widget function to create row of icons
   Widget _buildIcon(int index) {
     return GestureDetector(
       onTap: (() => setState(() {
@@ -40,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
             size: 25,
             color: _selectedIndex == index
                 ? Theme.of(context).primaryColor
-                : Color(0XFFB4C1C4)),
+                : const Color(0XFFB4C1C4)),
       ),
     );
   }
@@ -49,6 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
+          //safearea since no appbar is used
           child: ListView(
         padding: const EdgeInsets.symmetric(vertical: 30),
         children: [
@@ -74,8 +77,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   .toList(),
             ]),
           ),
-          SizedBox(height: 20),
-          DestinationCarousel(),
+          const SizedBox(height: 20),
+          const DestinationCarousel(),
           HotelCarousel(),
         ],
       )),
@@ -89,13 +92,6 @@ class _HomeScreenState extends State<HomeScreen> {
               icon: Icon(Icons.search, size: 30), label: ''),
           BottomNavigationBarItem(
               icon: Icon(Icons.local_pizza, size: 30), label: ''),
-          // BottomNavigationBarItem(
-          //     icon: CircleAvatar(
-          //       radius: 15,
-          //       backgroundImage: NetworkImage(
-          //           'https://images.pexels.com/photos/11293719/pexels-photo-11293719.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
-          //     ),
-          //     label: '')
           BottomNavigationBarItem(
               icon: Icon(Icons.person, size: 30), label: ''),
         ],

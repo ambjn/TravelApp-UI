@@ -1,16 +1,23 @@
 # Travel App UI
 
-A new Flutter project.
+## About:
 
-## Getting Started
+Travel App UI is a modern & elegant UI made using Flutter
 
-This project is a starting point for a Flutter application.
+## Packages:
 
-A few resources to get you started if this is your first Flutter project:
+<ul>
+<li> font_awesome_flutter: ^10.1.0 </li>
+</ul>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Installation:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+In the command terminal, run the following commands:
+
+    $ git clone https://github.com/ambjn/TravelApp-UI.git
+    $ cd TravelApp-UI
+    $ flutter run
+
+## Screenshots:
+
+<center> <img src = screenshots/1.png alt='screenshot-of-app'> </center>

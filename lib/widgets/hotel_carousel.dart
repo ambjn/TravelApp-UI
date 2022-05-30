@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:travel_ui/models/hotel_model.dart';
 
 class HotelCarousel extends StatelessWidget {
-  HotelCarousel({Key? key}) : super(key: key);
+  const HotelCarousel({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -66,17 +66,17 @@ class HotelCarousel extends StatelessWidget {
                                   overflow: TextOverflow.ellipsis,
                                   maxLines: 1,
                                 ),
-                                SizedBox(height: 2),
+                                const SizedBox(height: 2),
                                 Text(
                                   hotel.address,
                                   style: TextStyle(color: Colors.grey),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 2,
                                 ),
                                 Text(
                                   '\$${hotel.price} / night',
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.w600,
                                   ),
@@ -90,7 +90,7 @@ class HotelCarousel extends StatelessWidget {
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(20),
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                   color: Colors.black26,
                                   offset: Offset(0, 2),
