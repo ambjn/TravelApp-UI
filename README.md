@@ -2,7 +2,7 @@
 
 ## About:
 
-Travel App UI is a modern & elegant UI made using Flutter
+Travel App UI is a modern & elegant UI made using Flutter.
 
 ## Packages:
 
